@@ -5,10 +5,7 @@ import com.kass.entity.Payment;
 import com.kass.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName: PaymentController
@@ -23,7 +20,7 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     public CommonResult create(Payment payment) {
         int result = paymentService.create(payment);
         log.info("插入数据的ID:\t" + payment.getId());

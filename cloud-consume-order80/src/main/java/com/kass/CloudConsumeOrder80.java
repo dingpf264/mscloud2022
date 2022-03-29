@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CloudProvidePayment {
+public class CloudConsumeOrder80 {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudProvidePayment.class, args);
+        SpringApplication.run(CloudConsumeOrder80.class, args);
     }
-
 }
